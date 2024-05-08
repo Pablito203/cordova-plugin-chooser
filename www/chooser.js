@@ -65,7 +65,7 @@ function getFileInternal (
 				try {
 					var o = JSON.parse(json);
 
-					if (includeData) {
+					if (includeData && o.data) {
 						var base64Data = o.data.replace(
 							/[^A-Za-z0-9\+\/]/g,
 							''
